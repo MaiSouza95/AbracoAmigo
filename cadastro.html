@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrace um Amigo - Cadastro</title>
+    <link rel="stylesheet" href="styles.css">   
+</head>
+<body>
 
+    <header>
+        <nav>
+            <div class="logo">🍀, Vidas Importam</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <ul id="navMenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastro.html" class="active">Seja um Amigão</a></li>
+                <li><a href="projeto.html">Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero hero-cadastro">
+        <div class="hero-content">
+            <h1> Junte-se a Nós como Amigão</h1>
+            <p> Preencha o formulário abaixo para se tornar um Amigão e fazer a diferença na vida de alguém.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="signup-section">
+            <h2> Formulário de Cadastro</h2>
+            <div class="sucess-message" id="sucessMessage">
+                ✅ Cadastro realizado com sucesso! Entraremos em contato em breve.
+            </div>
+            <form id="volunteerForm" onsubmit="handleSubmit(event)">
+                <fieldset>
+                    <legend> Informações Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo: </label>
+                        <input type="text" id="name" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(61) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="16" max="100" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Disponibilidade</legend>
+                    <div class="form-group">
+                        <label for="disponibilidade">Quando Você pode apoiar?:</label>
+                        <select id="disponibilidade" name="disponibilidade" required>
+                            <option value="">Selecione</option>
+                            <option value="flexivel"> horário Flexível</option>
+                            <option value="dias_úteis">Dias úteis</option>
+                            <option value="finais_semana">Finais de Semana</option>
+                            <option value="pontual">Ações Pontuais</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="area-interesse">Área de Interesse:</label>
+                        <select id="area-interesse" name="area-interesse" required>
+                            <option value="">Selecione</option>
+                            <option value="apoio_emocional">Apoio Emocional</option>
+                            <option value="atividades_recreativas">Atividades Recreativas</option>
+                            <option value="eventos_comunitarios">Eventos Comunitários</option>
+                            <option value="qualquer">Qualquer área</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Motivação</legend>
+                    <div class="form-group">
+                        <label for="motivacao">Por que você quer ser um Amigão?</label>
+                        <textarea id="motivacao" name="motivacao" placeholder="Compartilhe sua motivação..." ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="experiencia">Você tem experiência prévia em voluntariado?</label>
+                        <textarea id="experiencia" name="experiencia" placeholder="Descreva sua experiência..." ></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-primary"> Enviar Cadastro</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Abrace um Amigo. Todos os direitos reservados.</p>
+        <p> Desenvolvido por Mayara souza, Transformando vidas através da tecnologia.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
